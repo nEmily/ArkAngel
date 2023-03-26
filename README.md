@@ -4,4 +4,4 @@ ArkAngel is a two-chapter long, top-down RPG space-adventure game. You play as t
 
 Watch gameplay here: https://www.youtube.com/watch?v=Y_lrSMRBiHQ&feature=youtu.be
 
-To download and play the game, please download the executable file.
+To download and play the game, please download the executable file here: https://victorzhang.itch.io/arkangel
