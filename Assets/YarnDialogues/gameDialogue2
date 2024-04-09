@@ -1,0 +1,591 @@
+title: Mom
+tags: 
+colorID: 1
+position: 225,-186
+---
+<<if visited("Mom") is true or visited("Dad") is true>>
+    [[Mom Johnson Happy]]
+<<else>>
+    Mom: Alright Riley, we’ll let you go out now. Don’t go around wreaking too much havoc, you hear? Hit spacebar if you understand. 
+    Mom: Good! Dad and I are going to go work now. Go play!
+<<endif>>
+===
+title: Engine
+tags: 
+colorID: 5
+position: 3001,7
+---
+Object: It's the engine of ARKANGEL. It looks pretty cool but doesn't really do anything but make a lot of noise sometimes.
+Object: That part is scary.
+===
+title: Cooling Towers
+tags: 
+colorID: 5
+position: 3067,267
+---
+Object: Cooling towers use the evaporation of water to remove... heat... working fluid.....
+Object: Riley forgot the rest. School isn't fun.
+===
+title: Computer
+tags: 
+colorID: 0
+position: 2142,-197
+---
+<<if $other_watch_pieces_unlocked is true>>
+    [[Computer1]]
+<<else>>
+    Object: When Mom wasn't looking, Dad helped Riley install Maplestory on this computer. Good times.
+<<endif>>
+===
+title: Server
+tags: 
+colorID: 5
+position: 3320,-189
+---
+Object: It's just the computer servers. Boring!
+===
+title: Johnson
+tags: 
+colorID: 6
+position: 1400,-215
+---
+<<if visited("Athena") is true>>
+    [[Johnson Happy]]
+<<else>>
+    [[Johnson1]]
+<<endif>>
+===
+title: Lockers
+tags: 
+colorID: 5
+position: 2974,-241
+---
+Object: These are lockers. Riley's backpack and packed lunches are in here somewhere...
+===
+title: Cardboard Boxes
+tags: 
+colorID: 4
+position: 1936,-192
+---
+<<if $watch_piece_unlocked is true and $found_watch_piece is false>>
+    [[Cardboard Boxes 2]]
+<<else>>
+    Object: Just junk... and 500 years of dust...
+<<endif>> 
+===
+title: Computers and Desks
+tags: 
+colorID: 5
+position: 3394,47
+---
+Object: Hi-tech computers and hardware. It's how Athena steers ARKANGEL.
+Object: Riley isn't allowed to touch any of the buttons.
+Athena: RILEY HOW MANY TIMES DO I HAVE TO REPEAT MYSELF? HANDS OFF THAT DAMN CONTROLLER!
+Object: Oops.
+===
+title: Windows
+tags: 
+colorID: 5
+position: 3443,287
+---
+Object: It's space! Riley thinks it looks cool. Look, a comet!
+===
+title: Athena
+tags: 
+colorID: 3
+position: 700,-203
+---
+<<if visited("Athena") is false and $found_watch_piece is false>>
+    Athena: Oh God, is it Bring-Your-Kid-To-Work Day again? Tell your parents I'm a pilot, not a babysitter.
+    Athena: Find Johnson if you are bored - not like he's ever busy with work anyway.
+<<else>>
+    [[Athena2]]
+<<endif>>
+===
+title: Athena2
+tags: 
+colorID: 3
+position: 941,-203
+---
+<<if $ask_athena is true and $received_password is false>>
+    [[Athena Password]]
+<<else>>
+    <<if $no_password is true>>
+        [[Athena Gives Password Hint]]
+    <<else>>
+        <<if $received_password is true or $found_watch_piece is true>>
+            Athena: Look, kid, I have a REAL job here. Scram!
+            <<if $cant_find_transistor is true and $found_transistor is false>>
+                Riley: Maybe Riley can find some place where Athena won't see $them...and get transistors!
+            <<endif>>
+        <<else>>
+            Athena: Look, kid, I have a REAL job here. Find Johnson if you are bored - not like he's ever busy with work anyway.
+        <<endif>>
+    <<endif>>
+<<endif>>
+===
+title: Johnson Happy
+tags: 
+colorID: 6
+position: 1329,479
+---
+<<if $found_watch_piece is false>>
+    Johnson: What brings you here today, Riley?
+    -> Athena told me to find you.
+        Johnson: Did she? Why?
+        -> I dunno.
+            Johnson: Well... trust the goddess of wisdom to be illuminating.
+        -> I think she just wanted me to go away.
+            Johnson: Haha, that's Athena to you. Don't take it too personally - she's like that to everyone.
+            Johnson: Let me think of something you can do... Oh! 
+            Johnson: Have you tried looking through these boxes? There are some cool ancient stuff lying around here. 
+        <<set $watch_piece_unlocked to true>>    
+    -> Just wandering around.
+        Johnson: Do you want to know a secret?
+        -> Yes.
+            Johnson: Do you see these boxes here?
+            Johnson: I get my hair dyes from there. Those are more than a century old, but somehow they still work. Way better than the new stuff - those smell weird...
+            Object: ...Riley can ESCAPE and run away right now...
+            Johnson: ...and you know, the tensile strength of different types of hair matters too...
+            Object: If only there was an ESC button to press...
+            Johnson: ...the original hair dyes just sort of breaks the fibers in your hair down, you know? So only hair with high tensile strength could withstand the damage...
+            Johnson: What do you use with your hair, Riley?
+                -> I have to go now.
+        -> No.
+            Johnson: Well, too bad. Do you see these boxes here?
+            Johnson: I get my hair dyes from there. Those are more than a century old, but somehow they still work. Way better than the new stuff - those smell weird...
+            Object: ...Riley can ESCAPE and run away right now...
+            Johnson: ...and you know, the tensile strength of different types of hair matters too...
+            Object: If only there was an ESC button to press...
+            Johnson: ...the original hair dyes just sort of breaks the fibers in your hair down, you know? So only hair with high tensile strength could withstand the damage...
+            Johnson: What do you use with your hair, Riley?
+                -> I have to go now.
+<<else>>
+    [[Johnson Found Watch Piece]]
+<<endif>>
+===
+title: Cardboard Boxes 2
+tags: 
+colorID: 4
+position: 1627,685
+---
+Riley: Magazines, books... boring!
+Riley: Wait a minute... what's that?
+Object: Riley found a gadget!
+Riley: Although it doesn't seem functional... I wonder what it does.
+Object: Hint: Press the 'P' button to pause the screen and open your inventory. Press 'P' again to close the screen.
+Riley: Maybe Mom or Dad will know what to do with this?
+<<set $found_watch_piece to true>>
+===
+title: Dad
+tags: 
+colorID: 2
+position: -270,-187
+---
+<<if visited("Dad") is true or visited("Mom") is true>>
+    [[Dad Johnson Happy]]
+<<else>>
+    Dad: Alright Riley, we’ll let you go out now. Don’t go around wreaking too much havoc, you hear? Hit spacebar if you understand. 
+    Dad: Good! Mum and I are going to go work now. Have fun kiddo!
+<<endif>>
+===
+title: Dad Johnson Happy
+tags: 
+colorID: 2
+position: 559,474
+---
+<<if $found_watch_piece is true>>
+    [[Dad Found Watch]]
+<<else>>        
+    Dad: Hey kiddo, having fun? Did you say hi to everyone?
+<<endif>>
+===
+title: Computer2
+tags: 
+colorID: 0
+position: 1883,1110
+---
+<<if $computer_angry is true>>
+    [[Computer Angry]]
+<<else>>
+    Computer: Hello Riley :)
+    Computer: How may I help you? :D
+        -> Fix my gadget now!
+            Computer: RUDE! >:(
+            Riley: Maybe Riley shouldn't have done that...
+            <<set $computer_angry to true>>
+        -> I found a gadget, but it's not working.
+            Computer: I am very sorry to hear that :'(
+            Computer: I can help you analyze it and identify potential problems :D
+            Computer: Would you mind holding the watch at a position within the working range of my scanner? :) Thank you!
+            [[Computer Fix Watch]]
+        -> Do you know what this gadget is supposed to do?
+            Computer: I am sorry, I do not recognize it. :(
+<<endif>>
+===
+title: Johnson1
+tags: 
+colorID: 6
+position: 1701,-190
+---
+Johnson: Hey Riley! What's up?
+    -> Can I ask you a question, Johnson?
+        Johnson: Sure! Go for it.
+        Riley: Why is your hair so weird?
+        Johnson: Weird?? You mean cool! 'Cause I am cool.
+        -> But you're forty!
+            Johnson: What is that supposed to mean??
+            Object: Riley should say hi to everybody here today.
+        -> Nah, it's weird.
+            Johnson: Go away.
+            Object: Riley should say hi to everybody here today.
+    -> I'm bored.
+        Johnson: Yeah... life on the ship is boring. Hard to imagine that people actually used to volunteer for these voyages, right?
+        Johnson: Tell you what. Talk to everyone, and if you're still bored, I'll give you an adventure!
+        Object: Riley should say hi to everybody here today.
+===
+title: Computer1
+tags: 
+colorID: 0
+position: 1617,1133
+---
+<<if $ask_athena is true>>
+Object: Please enter password: ________
+    -> MapleStory
+        Computer: Incorrect password.
+    -> 06302368
+        Computer: Incorrect password.
+    -> Ask Athena
+        Computer: You've successfully logged in.
+        <<set $received_password to true>>
+        <<set $no_password to false>>
+        <<if $parts_unlocked is false>>
+            [[Computer2]]
+        <<else>>
+            [[Computer Further Questions]]
+        <<endif>>
+    -> 1234
+        Computer: Are you kidding me?
+<<else>>
+    Object: Please enter password: ________
+        -> MapleStory
+            Computer: Incorrect password.
+        -> 06302368
+            Computer: Incorrect password.
+        -> 1234
+            Computer: Are you kidding me?
+    <<set $no_password to true>>
+<<endif>>
+===
+title: Johnson Found Watch Piece
+tags: 
+colorID: 6
+position: 1391,926
+---
+<<if $parts_unlocked is true>>
+    [[Johnson Caesium]]
+<<else>>
+    <<if visited("Johnson Found Watch Piece") is false>>    
+        Johnson: Hey, what's up, Riley? 
+        Johnson: Ohhh.. what's that thing you got there?
+    <<else>>
+        Johnson: Hey, what's up?
+    <<endif>>
+<<endif>>
+===
+title: Dad Found Watch
+tags: 
+colorID: 2
+position: 571,926
+---
+<<if $parts_unlocked is true>>
+    [[Dad Help With Watch]]
+<<else>>
+    Dad: What's that shiny thing you've got there, Riley? Can I take a look at it?
+        -> Sure.
+            Dad: Hmm... 
+            Dad: Looks like it could be a holographic display of some sort, but I don't think it works. Might be missing a few pieces here and there.
+            Dad: Try looking it up online!
+            <<set $other_watch_pieces_unlocked to true>>
+        -> Nothing!
+            Dad: Really? Well, if you say so. Just make sure it's safe though, ok? Things on the ship are usually hundreds of years old so you never know what might go wrong with them.
+<<endif>>
+===
+title: Mom Johnson Happy
+tags: 
+colorID: 1
+position: 819,487
+---
+<<if $found_watch_piece is true>>
+    [[Mom Found Watch]]
+<<else>>        
+    Mom: Make sure you say hi to everyone here! Both Johnson and Athena are in today.
+<<endif>>
+===
+title: Mom Found Watch
+tags: 
+colorID: 1
+position: 816,918
+---
+<<if $parts_unlocked is true>>
+    [[Mom Help With Watch]]
+<<else>>
+    Mom: What's that in your hand?
+        -> I don't know, but it looks cool.
+            Mom: Let me take a look.
+            Mom: Hmm... It's just a broken gadget. Why are you even keeping it?
+        -> Nothing!
+            Mom: It can't be "nothing." Let me take a look.
+            Mom: Hmm... It's just a broken gadget. Why are you even keeping it?
+<<endif>>
+===
+title: Computer Angry
+tags: 
+colorID: 0
+position: 2144,1264
+---
+Computer: I do not wish to communicate with you right now. >:(
+    -> I apologize greatly.
+        Computer: I am not certain if you are sincere or not... :/
+        Computer: I have been told that humans often masquerade their true intentions in order to attain their goals :(
+    -> I'm sorry, computer...
+        Computer: Are you truly sorry? :|
+        Computer: Okay, your apology is accepted. Do you still require my assistance in fixing your gadget? :|
+        <<set $computer_angry to false>>
+        -> Yes.
+            Computer: Okay. Would you mind holding the gadget at a position within the working range of my scanner? :)
+            [[Computer Fix Watch]]
+        -> No.
+            Computer: Okay. Good day to you. :)
+===
+title: Computer Fix Watch
+tags: 
+colorID: 0
+position: 1829,1375
+---
+Computer: Hm. You need a type-IIIa transistor and a neodymium magnet, both of which are abundant on the ARKANGEL. :)
+Computer: But a bigger problem resides with the caesium-133 that powers the gadget. It requires replacement, but nowhere on the ARKANGEL could I locate spare caesium. :(
+Computer: I am tremendously sorry... I sincerely wish I could be of more help. :'(
+Object: Hmm... who can Riley talk to that might know more?
+
+<<set $parts_unlocked to true>>
+===
+title: Johnson Caesium
+tags: 
+colorID: 6
+position: 1528,1571
+---
+Johnson: Hey, what's up Riley?
+    -> Do you know where I could find neodymium on the ship?
+        Johnson: The magnets? Try looking around here. There must be a ton of them around. I remember making a Levitron out of them when I was still a kid on the ship... those were fun days.
+    -> Do you know where I could find calcium on the ship?
+        Johnson: Calcium? Do you want milk or something? 
+    -> Do you know where I could find cadmium on the ship?
+        Johnson: Oh, that's rare... We *might* have some around the storage room, but I'm not too sure...
+    -> Do you know where I could find caesium on the ship?
+        Johnson: Oh yeah, definitely. I've used some on the engine before.
+        Johnson: Which isotope do you need?
+            -> caesium-133???
+                Johnson: Right in my toolbox. Give me a sec.
+                Johnson: Here you go.
+                Object: Riley found caesium-133!
+                <<set $found_caesium to true>>
+            -> caesium-134???
+                Johnson: Sorry Riley, but I don't think we have that on our ship.
+            -> caesium-135???
+                Johnson: Right in my toolbox. Give me a sec.
+                Johnson: Here you go.
+                Object: Riley found caesium-135!
+                Object: Wait a minute...is this the right one????
+                <<set $found_caesium_135 to true>>
+            -> caesium-137???
+                Johnson: Hmm, that's a rare isotope. Try asking your mom?
+                <<set $ask_mom_about_caesium to true>>
+===
+title: Dad Help With Watch
+tags: 
+colorID: 2
+position: 724,1560
+---
+Dad: Need any help with the gadget?
+    -> Yes please!
+        Dad: Sure thing! I'll help you out when I'm done with work here. Go play now, ok?
+    -> Not really. But thanks for asking, dad.
+        Dad: No problem, kiddo.
+    -> What are type-IIIa transistors?
+        Dad: Those? We mostly use them on the quantum computers.
+        <<set $transistors_on_quantum_computer_unlocked to true>>
+    -> What are Neodymium magnets?
+        Dad: Those are super strong magnets. Careful with those, Riley - you don't want your fingers in between two of those magnets!
+===
+title: Mom Help With Watch
+tags: 
+colorID: 1
+position: 1138,1469
+---
+<<if $ask_mom_about_caesium is true>>
+    [[Mom Help With Watch With Caesium]]
+<<else>>
+    [[Mom Help With Watch Without Caesium]]
+<<endif>>
+===
+title: Mom Help With Watch With Caesium
+tags: 
+colorID: 1
+position: 987,1701
+---
+Mom: Weren't you playing, Riley? What are you doing here?
+    -> I'm trying to find some caesium-137. Do you know where it could be?
+        Mom: Caesium-137? Their half-life is only 30 years! You won't find any on the ship!
+    -> I'm trying to fix the gadget I found. Can you help me?
+        Mom: Uhhh... I'll help you out once I finish calculating our new trajectory, okay?
+    -> I'm just wandering around. Hey, what are you working on, Mom?
+            Mom: Ahh. You see, the trajectory of comet ISON might intersect ours soon, so we need to calculate a new trajectory.
+            Mom: But this is not as easy as it seems. We need to optimize our trajectory by going around an object with strong gravitational field to gain speed.
+            Mom: Do you understand?
+            -> Uh, sure.
+                Mom: Don't lie.
+            -> Not really.
+                Mom: I guess I should start teaching you about hyperbolic curves then, shouldn't I?
+===
+title: Mom Help With Watch Without Caesium
+tags: 
+colorID: 1
+position: 1313,1694
+---
+Mom: Weren't you playing, Riley? Why are you here?
+    -> I'm trying to fix the gadget I found. Can you help me?
+        Mom: Uhhh... I'll help you out once I finish calculating our new trajectory, okay?
+    -> I'm just wandering around. Hey, what are you working on, Mom?
+        Mom: Ahh. You see, the trajectory of comet ISON might intersect ours soon, so we need to calculate a new trajectory.
+        Mom: But this is not as easy as it seems. We need to optimize our trajectory by going around an object with strong gravitational field to gain speed.
+        Mom: Do you understand?
+        -> Uh, sure.
+            Mom: Don't lie.
+        -> Not really.
+            Mom: I guess I should start teaching you about hyperbolic curves then, shouldn't I?
+===
+title: Other Computers
+tags: 
+colorID: 0
+position: 2581,-179
+---
+<<if $transistors_on_quantum_computer_unlocked is false or $found_transistor to true>>
+    Object: A whole wall of quantum computers. Riley used to hide behind them when playing Hide-and-Seek with Dad as a little kid. Good old days.
+    Athena: I CAN STILL SEE YOU OVER HERE RILEY DON'T YOU EVEN TRY TO MESS AROUND!
+    Object: ...Athena does not like it even when Riley is just standing in front of the computers.
+<<else>>
+    [[Quantum Computer No Transistor]]
+<<endif>>
+===
+title: Computer Backside
+tags: 
+colorID: 0
+position: 2354,-200
+---
+<<if $transistors_on_quantum_computer_unlocked is false>>
+    Object: The quantum computer fans blow out warm air here. Riley likes to sit here and look at the stars. Sometimes Athena doesn't even notice.
+<<else>>
+    [[Quantum Computer Transistor]]
+<<endif>>
+===
+title: Quantum Computer Transistor
+tags: 
+colorID: 0
+position: 2212,1806
+---
+<<if $found_transistor is false>>
+    Object: Let's see... are there any type-IIIa transistors around here...?
+    Object: Aha!
+    Object: Riley found a type-IIIa transistor!
+    <<set $found_transistor to true>>
+<<else>>
+    Object: Hopefully this thing works without a couple of the transistors...
+<<endif>>
+===
+title: Quantum Computer No Transistor
+tags: 
+colorID: 0
+position: 2442,1800
+---
+Object: I wonder if I could find some unused type-IIIa transistors on the quantum computer...
+Athena: RILEY!
+Object: ...
+Object: Drat.
+<<set $cant_find_transistor to true>>
+===
+title: Computer Further Questions
+tags: 
+colorID: 0
+position: 1785,1580
+---
+Computer: Hello again Riley. :)
+Computer: How may I help you today? :)
+    -> I forgot what parts I need for my gadget...
+        Computer: No problem! :D
+        Computer: The components you require are a type-IIIa transistor, a Neodymium magnet, and caesium-133. :)
+    -> Do you know where the parts I need are?
+        Computer: Sorry, I do not know :(
+        Computer: Actually, I do know that magnets are typically kept far away from the electronics. But I do not know if this is of any help to you. :(
+===
+title: Far Box
+tags: 
+colorID: 5
+position: 2719,1221
+---
+<<if $parts_unlocked is true and $found_neodymium_magnet is false>>
+    Object: I see something shiny here...
+    Object: Riley found a Neodymium magnet!
+    <<set $found_neodymium_magnet to true>>
+<<else>>
+    Object: Lots of shiny stuff. Too bad Riley has no idea what any of these are.
+<<endif>>
+===
+title: Minigame
+tags: 
+colorID: 0
+position: 1699,2160
+---
+Object: All the gadget pieces are now found! Now all Riley needs to do is to put the pieces together and find out what it is.
+<<set $start_minigame to true>>
+===
+title: Sticky Note
+tags: 
+colorID: 5
+position: 3082,514
+---
+Object: Computer password: Ask Athena
+<<set $ask_athena to true>>
+===
+title: Athena Password
+tags: 
+colorID: 3
+position: 1088,923
+---
+Athena: Computer password? You forgot again? Just look at the sticky note next to the computer!
+Riley: It told me to ask you though...
+Athena: ...
+Athena: The password is "Ask Athena", idiot!
+===
+title: Access Denied
+tags: 
+colorID: 5
+position: 3393,567
+---
+Object: Mom's voice echoed...
+Mom: RILEY! DO NOT LEAVE THE WORKPLACE!
+===
+title: Other Cardboad Boxes
+tags: 
+colorID: 5
+position: 2993,1222
+---
+Object: These won't open... Darn!
+===
+title: Athena Gives Password Hint
+tags: 
+colorID: 3
+position: 1171,125
+---
+Athena: Computer password? You forgot again? That's why there's a sticky note next to the computer!
+===

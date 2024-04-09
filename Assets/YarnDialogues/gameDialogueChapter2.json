@@ -1,0 +1,982 @@
+[
+	{
+		"title": "Mom",
+		"tags": "",
+		"body": "<<if $day_2 is false>>\n    [[Mom1]]\n<<else>>\n    [[Mom2]]\n<<endif>>\n",
+		"position": {
+			"x": 88,
+			"y": -228
+		},
+		"colorID": 1
+	},
+	{
+		"title": "Engine",
+		"tags": "",
+		"body": "Object: Grrrrrrrrrr..........\n",
+		"position": {
+			"x": 3063,
+			"y": 0
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Cooling Towers",
+		"tags": "",
+		"body": "Object: Cooling towers use the evaporation of water to remove... heat... working fluid.....\nObject: Riley forgot the rest. School isn't fun.\n",
+		"position": {
+			"x": 3067,
+			"y": 267
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Computer",
+		"tags": "",
+		"body": "Object: Please enter password: ________\n    -> MapleStory\n        Computer: Incorrect password.\n    -> 06302368\n        Computer: Incorrect password.\n    -> Ask Athena\n        Computer: You've successfully logged in.\n        [[Computer1]]\n    -> 1234\n        Computer: Are you kidding me?\n",
+		"position": {
+			"x": 1362,
+			"y": -186
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Server",
+		"tags": "",
+		"body": "Object: It's just the computer servers. Boring!\n",
+		"position": {
+			"x": 3421,
+			"y": -196
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Johnson",
+		"tags": "",
+		"body": "<<if $day_2 is false>>\n    Object: It sounds like Johnson is humming something familiar.\n    Johnson: Oh hey Riley!\n    Riley: Hi Johnson!\n    <<if $has_watch is true>>\n        Johnson: What's that? Is it the gadget that you fixed?\n        Riley: Yeah! Turns out it's a watch.\n        Johnson: A watch? That's cool!\n            -> What are you doing?\n                Johnson: Just watching the stars. They all seem brighter than I last remembered. Come check them out, Riley.\n                    -> Okay, I will.\n                    -> Does it remind you of something?\n                        Johnson: Hmm...my daughter. She is out there somewhere. I hope to see her someday.\n                            -> Oh.\n                            -> I'm sorry.\n                            -> Why is she out there?\n                                Johnson: It's a long story. She ran off with her friend Luma and the other star children.\n            -> Really? It's just a watch though.\n                Johnson: \"Just a watch?\" That thing must be centuries old!\n            -> I was hoping it would do something more...\n                Johnson: Awww... shucks, I guess.\n    <<endif>>\n<<else>>\n    [[Johnson2]]\n<<endif>>\n",
+		"position": {
+			"x": 1024,
+			"y": -206
+		},
+		"colorID": 6
+	},
+	{
+		"title": "Lockers",
+		"tags": "",
+		"body": "Object: These are lockers. Riley's backpack and packed lunches are in here somewhere...\n",
+		"position": {
+			"x": 3043,
+			"y": -244
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Computer Center",
+		"tags": "",
+		"body": "<<if $npc_at_center is true>> \n    Object: It's up to Riley now to save the ARKANGEL.\n    <<set $start_center_minigame to true>>\n<<else>>\n    <<if $start_ch2_minigame is false>>\n        <<if $can_discover_problem is true and $found_problem is false>> \n            Object: Doesn't look like there's any issue here. \n        <<else>>\n            Object: Hi-tech computers and hardware. It's how Athena steers ARKANGEL.\n            Object: Riley isn't allowed to touch any of the buttons.\n        <<endif>>\n    <<else>>\n        Object: Riley needs to bring Athena to this computer.\n    <<endif>>\n<<endif>>\n",
+		"position": {
+			"x": 3079,
+			"y": 841
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Windows",
+		"tags": "",
+		"body": "<<if $day_3 is false>>\n    Object: It's space! Riley thinks it looks cool. Look, a comet!\n<<else>>\n    [[Windows3]]\n<<endif>>\n",
+		"position": {
+			"x": 2505,
+			"y": 45
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Athena",
+		"tags": "",
+		"body": "<<if $day_2 is false>>\n    Athena: The parameters look fine... X-2 Vpp at 4.2... this doesn't make sense at all... Riley, I am busy.\n<<else>>\n    [[Athena2]]\n<<endif>>\n",
+		"position": {
+			"x": 658,
+			"y": -217
+		},
+		"colorID": 3
+	},
+	{
+		"title": "Dad",
+		"tags": "",
+		"body": "<<if $day_2 is false>>\n    [[Dad1]]\n<<else>>\n    [[Dad2]]\n<<endif>>\n",
+		"position": {
+			"x": -459,
+			"y": -240
+		},
+		"colorID": 2
+	},
+	{
+		"title": "Computer Right",
+		"tags": "",
+		"body": "<<if $npc_at_right is true>> \r\n    Object: Can Riley really do this?\r\n    <<set $start_right_minigame to true>>\r\n<<else>>\r\n    <<if $start_ch2_minigame is false>>\r\n        <<if $can_discover_problem is true and $found_problem is false>> \r\n            Object: Riley can't find any problems here.\r\n        <<else>>\r\n            Object: A whole wall of quantum computers. Riley used to behind them when playing Hide-and-Seek with Dad as a little kid. Good old days.\r\n        <<endif>>\r\n    <<else>>\r\n        Object: Riley needs to bring Dad to this computer.\r\n    <<endif>>\r\n<<endif>>\r\n",
+		"position": {
+			"x": 3384,
+			"y": 839
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Computer Backside",
+		"tags": "",
+		"body": "<<if $can_discover_problem is true and $found_problem is false>> \n    Object: There's no problems at the back here. Looks like the missing transistors didn't affect anything either.\n<<else>>\n    Object: The quantum computer fans blow out warm air here. Riley likes to sit here and look at the stars. Sometimes Athena doesn't even notice.\n<<endif>>\n",
+		"position": {
+			"x": 3423,
+			"y": 69
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Far Box",
+		"tags": "",
+		"body": "<<if $find_final_note is true>>\n    <<if $unlock_doors is false>>\n        Riley: Huh... What's that?\n        Object: Riley found a note!\n        Object: Little Riley:                                                       Don't bother with the capacitor. Go through these doors in order: 143124                              - a well-wisher\n        <<set $unlock_doors to true>>\n    <<else>>\n        Object: Riley reads the note again:\n        Object: Little Riley:                                                       Don't bother with the capacitor. Go through these doors in order: 143124                              - a well-wisher\n    <<endif>>\n<<else>>\n    [[Cardboard Boxes]]\n<<endif>>\n",
+		"position": {
+			"x": 2475,
+			"y": 1978
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Sticky Note",
+		"tags": "",
+		"body": "Object: Computer password: Ask Athena\n",
+		"position": {
+			"x": 3079,
+			"y": 518
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Access Denied",
+		"tags": "",
+		"body": "Object: Riley is not allowed to run away from $their problems.\n",
+		"position": {
+			"x": 3429,
+			"y": 312
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Athena2",
+		"tags": "",
+		"body": "<<if $day_3 is false>>\r\n    Athena: This damn machine...What?\r\n    <<if visited(\"Johnson2\") is false>>\r\n        Riley: Did you stay here for the whole night?\r\n    <<else>>\r\n        Riley: You stayed here all night as well?\r\n        Athena: What are you talking about.\r\n        Riley: Nothing.\r\n    <<endif>>\r\n    Athena: I'm hardworking. Unlike you, Riley.\r\n        -> I'm hardworking when I want to be!\r\n            Athena: Which is like, never.\r\n        -> What were you doing up late?\r\n            Athena: There is something wrong with the engine. The speed gauge is off.\r\n            Riley: Is it serious?\r\n            Athena: What? No, of course not. Johnson probably just messed something up last time he inspected it. That idiot.\r\n<<else>>\r\n    [[Athena3]]\r\n<<endif>>\n",
+		"position": {
+			"x": 700,
+			"y": 448
+		},
+		"colorID": 3
+	},
+	{
+		"title": "Bed",
+		"tags": "",
+		"body": "<<if $day_2 is false>>\n    <<if $can_sleep_1 is true>>\n        Bed: Go to sleep?\n            -> Yes.\n                <<set $day_2 to true>>\n                <<set $go_to_bed_2 to true>>\n            -> No.\n    <<else>>\n        Bed: It is too early to sleep.\n    <<endif>>\n<<else>>\n    [[Bed2]]\n<<endif>>\n",
+		"position": {
+			"x": 1852,
+			"y": -212
+		},
+		"colorID": 4
+	},
+	{
+		"title": "Bed2",
+		"tags": "",
+		"body": "<<if $day_3 is false>>\n    <<if $can_sleep_2 is true>>\n        Bed: Go to sleep?\n            -> Yes.\n                <<set $day_3 to true>>\n                <<set $go_to_bed_3 to true>>\n            -> No.\n    <<else>>\n        Bed: It is too early to sleep.\n    <<endif>>\n<<else>>\n    [[Bed3]]\n<<endif>>\n",
+		"position": {
+			"x": 1925,
+			"y": 489
+		},
+		"colorID": 4
+	},
+	{
+		"title": "Cabinet",
+		"tags": "",
+		"body": "<<set $play_music to true>>\nObject: ♪♫♪♫♪♫♫♪♪\n<<set $play_music to false>>\nRiley: Huh.\nObject: The future is weird.\n",
+		"position": {
+			"x": 2509,
+			"y": -229
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Bed3",
+		"tags": "",
+		"body": "<<if $day_4 is false>>\n    <<if $can_sleep_3 is true>>\n        Bed: Go to sleep?\n            -> Yes.\n                <<set $day_4 to true>>\n                <<set $go_to_bed_4 to true>>\n            -> No.\n    <<else>>\n        Bed: It is too early to sleep.\n    <<endif>>\n<<else>>\n    [[Bed4]]\n<<endif>>\n",
+		"position": {
+			"x": 1843,
+			"y": 1343
+		},
+		"colorID": 4
+	},
+	{
+		"title": "Kitchen",
+		"tags": "",
+		"body": "Object: High tech kitchen stove. Produces terrible food.\n",
+		"position": {
+			"x": 3754,
+			"y": 28
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Table",
+		"tags": "",
+		"body": "Object: Sometimes Johnson comes over to have dinner with Riley's family.\n",
+		"position": {
+			"x": 3749,
+			"y": 275
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Rug",
+		"tags": "",
+		"body": "<<if $found_something is false>>\n    Object: Riley hasn't washed this rug for two years. Or maybe three.\n        -> Wash the rug.\n            Riley: Ewww, what's that?! Wait...\n            Object: Riley found a useless item!\n            Riley: ...\n            Object: Riley threw it away.\n            <<set $found_something to true>>\n        -> The filthier, the better.\n<<else>>\n    Object: The rug still smells.\n<<endif>>\n",
+		"position": {
+			"x": 2258,
+			"y": -231
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Dresser",
+		"tags": "",
+		"body": "Object: Clothes that are never worn.... Riley wears the same outfit everyday.\n",
+		"position": {
+			"x": 3431,
+			"y": 557
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Desk1",
+		"tags": "",
+		"body": "<<if $mysterious_book is true>>\n    Object: Riley's favourite book collection (completely unread):\n        -> \"Principles of Mathematical Analysis\" by Walter Rudin.\n            Object: 2.32  Definition   A subset K of a metric space X is said to be compact if every open cover of K contains a finite subcover.\n            Object: Riley used to have these as bedtime stories. They are really good at putting Riley to sleep.\n        -> \"Four Quartets\" by T.S. Eliot.\n            Riley: Wait... where did this book come from? I must have completely missed it before.\n            [[Books]]\n        -> \"A Brief History of Time\" by Stephen Hawking.\n            Object: Time is relative, time is sometimes quicker, sometimes slower... \n            Object: Yeah, Riley totally gets it.\n        -> \"Call Me By Your Name\" by André Aciman.\n            Object: Johnson's favourite book, but Riley never even finished the first page.\n<<else>>\n    Object: Riley's favourite book collection (completely unread):\n        -> \"Principles of Mathematical Analysis\" by Walter Rudin.\n            Object: 2.32  Definition   A subset K of a metric space X is said to be compact if every open cover of K contains a finite subcover.\n            Object: Riley used to have these as bedtime stories. They are really good at putting Riley to sleep.\n        -> \"A Brief History of Time\" by Stephen Hawking.\n            Object: Time is relative, time is sometimes quicker, sometimes slower... \n            Object: Yeah, Riley totally gets it.\n        -> \"Call Me By Your Name\" by André Aciman.\n            Object: Johnson's favourite book, but Riley never even finished the first page.\n<<endif>>\n",
+		"position": {
+			"x": 1738,
+			"y": 8
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Mom2",
+		"tags": "",
+		"body": "<<if $day_3 is false>>\n    <<if $mom_has_moved_to_talk_to_dad is false>>\n        <<if $has_watch_but_lost is true>>\n            [[Mom2HasWatch]]\n        <<else>>\n            [[Mom2NoWatch]]\n        <<endif>>\n    <<else>>\n        [[MomDadTalkAboutNote]]\n    <<endif>>\n<<else>>\n    [[Mom3]]\n<<endif>>\n",
+		"position": {
+			"x": 196,
+			"y": 373
+		},
+		"colorID": 1
+	},
+	{
+		"title": "Mom2NoWatch",
+		"tags": "",
+		"body": "<<if visited(\"Mom2TellTruth\") is false>>\n    Riley: Mom, can I have my watch back?\n    Mom: I'm not done analyzing it yet.\n        -> Please? I really want it back.\n            Mom: I told you, I'm not done with - \n            Mom: Riley... why are you suddenly so desperate to have it back?\n                -> I'm not!\n                    [[Mom2Question]]\n                -> Someone told me to hold onto it.\n                    Mom: Who?\n                    [[Mom2TellTruth]]\n        -> Ok.\n            Object: Wait... Maybe Riley should try that again.\n<<else>>\n    Mom: I will talk to Dad about it, ok?\n<<endif>>\n",
+		"position": {
+			"x": 497,
+			"y": 672
+		},
+		"colorID": 1
+	},
+	{
+		"title": "Mom2TellTruth",
+		"tags": "",
+		"body": "Riley: I got a mysterious note telling me to keep the watch close to myself.\nMom: A mysterious note? Wait... where did you find it?\nRiley: It just appeared on my desk yesterday.\nMom: This isn't right. There's no way someone got into our home. And why would Dad play that kind of trick on you? I need to talk to Dad about this.\n<<set $dad_notified to true>>\n",
+		"position": {
+			"x": 522,
+			"y": 952
+		},
+		"colorID": 1
+	},
+	{
+		"title": "Computer1",
+		"tags": "",
+		"body": "<<if $day_2 is false>>\n    Computer: Good morning, Riley! What do you want to do today? :)\n        -> Play Mario Kart.\n            <<if $random1 is false>>\n                Object: Riley placed 3rd in Rainbow Road.\n                <<set $random1 to true>>\n            <<else>>\n                Object: Riley placed 1st in Luigi's Mansion.\n                <<set $random1 to false>>\n            <<endif>>\n        -> Play Maplestory.\n            Object: The file is corrupted...\n<<else>>\n    [[Computer2]]\n<<endif>>\n",
+		"position": {
+			"x": 1368,
+			"y": 72
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Johnson2",
+		"tags": "",
+		"body": "<<if $day_3 is false>>\n    Johnson: *yawwwn*\n    Riley: Are you tired?\n    Johnson: Yeah. Kind of stayed up all night.\n    Riley: Why?\n    Johnson: See that bright purple star over there? I've never seen something as breathtaking as that in my whole life. \n    Johnson: So I just stayed here, watching the stars. Beautiful things never last long - life, death - they all end in one blinking instance...\n        -> Bright purple star? That looks more like a black hole...\n            Johnson: No, no... black holes don't have light coming out of them. That has to be the remnants of a supernova or something.\n        -> Did you lose someone important?\n            Johnson: Yeah, that's before you were even born...  \n            Johnson: Well, but it's a story for another time, I suppose.\n                -> Okay.\n                -> I have time now.\n                    [[Johnson2Fun]]\n<<else>>\n    [[Johnson3]]\n<<endif>>\n",
+		"position": {
+			"x": 1074,
+			"y": 451
+		},
+		"colorID": 6
+	},
+	{
+		"title": "Computer2",
+		"tags": "",
+		"body": "<<if $day_3 is false>>\n    Computer: Good morning, Riley! What do you want to do today? :)\n        -> Play Mario Kart.\n            <<if $random1 is false>>\n                Object: Riley placed 4th in Rainbow Road.\n                <<set $random1 to true>>\n            <<else>>\n                Object: Riley placed 2nd in Mario Kart Stadium.\n                <<set $random1 to false>>\n            <<endif>>\n        -> Play Maplestory.\n            Object: The file is corrupted...\n        -> Look up \"Four Quartets.\"\n            Object: A collection of four poems by T.S. Eliot, meditating upon man's relationship with time, the universe, and the divine.\n<<else>>\n    [[Computer3]]\n<<endif>>\n",
+		"position": {
+			"x": 1384,
+			"y": 456
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Dad2",
+		"tags": "",
+		"body": "<<if $day_3 is false>>\n    <<if $has_watch_but_lost is false>>\n        [[Dad2NoWatch]]\n    <<else>>\n        [[Dad2HasWatch]]\n    <<endif>>\n<<else>>\n    [[Dad3]]\n<<endif>>\n",
+		"position": {
+			"x": -392,
+			"y": 429
+		},
+		"colorID": 2
+	},
+	{
+		"title": "Dad3",
+		"tags": "",
+		"body": "<<if $day_4 is false>>\n    <<if $find_final_note is false>>\n        [[Dad3.1]]\n    <<else>>\n        [[Dad3.2]]\n    <<endif>>\n<<else>>\n    [[Dad4]]\n<<endif>>\n",
+		"position": {
+			"x": -402,
+			"y": 1302
+		},
+		"colorID": 2
+	},
+	{
+		"title": "Mom3",
+		"tags": "",
+		"body": "<<if $day_4 is false>>\n    <<if $help_athena is false>>\n        <<if visited(\"Athena3\") is false>>\n            <<set $mom_face_back to true>>\n            Mom: ... O minstrel galleons of Carib fire... Bequeath us to no earthly shore until... is answered in the vortex of our grave... The seal's wide spindrift gaze toward paradise...\n            Riley: ...Mom...\n            <<set $mom_face_front to true>>\n            Mom: I don't have a good feeling about all of these things happening, Riley. The System couldn't locate anyone new.\n            Riley: It'll be ok, Mom.\n            Mom: Can you check on Athena for me? Thanks honey.\n        <<else>>\n            Mom: ... as I, must first be lost in fatal tides to tell? In signature...\n            Riley: MOM. Athena's having trouble with the engine. Can you help check out the problem?\n            Mom: ...I'm not sure I can be of much help...\n                -> Come on, Mom, you are the genius engineer.\n                    Mom: I've never been that good, Riley.\n                    Riley: Graduating from Berkeley EECS with a 4.0 at age 16 with three published research papers? If there's anyone who can fix the engine, it is you, Mom.\n                    Mom: Ah, those good old days... I suppose I can try but... I don't think I can make it work. If Athena cannot fix it, I probably can't either.\n                    Riley: But better than not trying, right? That's what you always tell me.\n                    Mom: Perhaps, Riley. Perhaps.\n                    <<set $help_athena to true>>\n                -> I know you can do it.\n                    Mom: Then I'm afraid I'll have to disappoint you, Riley.\n                    -> Come on, you are the genius engineerer.\n                        Mom: I've never been that good, Riley.\n                        Riley: Graduating from Berkeley EECS with a 4.0 at age 16 with three published research papers? If there's anyone who can fix the engine, it is you, Mom.\n                        Mom: Ah, those good old days... I suppose I can try but... I don't think I can make it work. If Athena cannot fix it, I probably can't either.\n                        Riley: But better than not trying, right? That's what you always tell me.\n                        Mom: Perhaps, Riley. Perhaps.\n                        <<set $help_athena to true>>\n        <<endif>>\n    <<else>>\n        <<if $mom_has_moved_to_talk_to_athena is false>>\n            Mom: I'll talk to Athena later, after I finished up my work here.\n        <<else>>\n            <<set $talking_to_mom to true>>\n            [[HelpAthena]]\n        <<endif>>\n    <<endif>>\n<<else>>\n    [[Mom4]]\n<<endif>>\n",
+		"position": {
+			"x": 74,
+			"y": 1306
+		},
+		"colorID": 1
+	},
+	{
+		"title": "AthenaFrustrated",
+		"tags": "",
+		"body": "Athena: This doesn't make any sense.... ugh! Does that idiot Johnson ever check this stupid machine? Riley, stop bugging me for a second can you?\n    -> What's wrong with you?\n        Athena: Maybe instead you should ask what's wrong with Johnson. This engine is crap. I can't deal with it.\n            -> What's the problem?\n                Athena: I don't even know anymore. The accelerometer is not working, the solar wind gauge is failing, the ion buffer channel is closed...\n                Riley: You can't fix any of them?\n                Athena: No! That's the problem! Usually I can figure anything out in a minute, but somehow my mind is really slow and refuses to cooperate!\n            -> Stop blaming Johnson!\n                Athena: Then give me a reason why everything is failing.\n                    -> What's the problem?\n                    Athena: I don't even know anymore. The accelerometer is not working, the solar wind gauge is failing, the ion buffer channel is closed...\n                    Riley: You can't just fix it?\n                    Athena: No! That's the problem! Usually I can figure anything out in a minute, but somehow my mind is really slow and refuses to cooperate!\n                    Object: Riley needs to go get Mom to help out. \n    -> Are you okay?\n        Athena: Do I look okay to you?\n        Riley: It was just a question!\n        Athena: Scram!\n",
+		"position": {
+			"x": 914,
+			"y": 1530
+		},
+		"colorID": 3
+	},
+	{
+		"title": "Johnson3",
+		"tags": "",
+		"body": "<<if $day_4 is false>>\n    <<if $can_discover_problem is false>>\n        Riley: Good morning, Johnson. \n        Johnson: ...Hi Riley.\n        Riley: You look terrible. Are you sick?\n        Johnson: No, just tired, I suppose. I should go to work - I'll see you later?\n            -> Ok. See you later!\n                Johnson: By the way, your mom really makes the best pancakes, ya know.\n            -> But mom says when you're tired, you should just get more rest.\n                Johnson: Well, you know, she isn't wrong. But I've got to do what needs to be done - Athena's gonna kill me if the engine still isn't fixed by tomorrow.\n            -> Are you sure you are fine?\n                Johnson: Yeah, of course I am.\n                Riley: Are you sure?\n                Johnson: ...well, uh... I guess I am also feeling a little slow lately... like how you feel just after waking up, you know? But I'll be ok.\n            Johnson: Oh wait, your mom wanted me to tell you something. What was it again...\n            Johnson: Ah, yes. The System completed the search, but we couldn't find anything. Your mom wants you to go see her now.\n    <<else>>\n        Johnson: Oh, hey Riley! What are you doing back home?\n        Riley: I can't explain, I have to hurry!\n    <<endif>>\n<<else>>\n    [[Johnson4]]\n<<endif>>\n",
+		"position": {
+			"x": 1132,
+			"y": 1284
+		},
+		"colorID": 6
+	},
+	{
+		"title": "Books",
+		"tags": "",
+		"body": "-> \"Burnt Norton\"\n    Riley: \"Time present and time past / Are both perhaps present in time future / And time future contained in time past.\"\n    [[Books]]\n-> \"East Coker\"\n    Riley: \"In my beginning is my end.\"\n    [[Books]]\n-> \"The Dry Salvages\"\n    Riley: \"I do not know much about gods; but-\" oh, what's that?\n    Object: Riley found a note!\n    Object: Little Riley:                                                 Keep the watch close to yourself. Sweet dreams.                        - a well-wisher  (P.S. Keep this our little secret.)\n    <<set $found_note_here to true>>\n    <<set $can_sleep_1 to true>>\n    <<if $has_watch is false>>\n        Riley: I don't have the watch anymore... What could this mean??\n        Object: It's too late now to do anything. Riley can talk to Mom in the morning.\n            -> Go to bed.\n                <<set $day_2 to true>>\n                <<set $go_to_bed_2 to true>>\n            -> Stay up anyway.\n    <<else>>\n        Riley: Phew! Luckily, I didn't give it to Mom. But what could this mean?\n        Object: It's too late now to do anything. Riley can talk to Mom in the morning.\n            -> Go to bed.\n                <<set $day_2 to true>>\n                <<set $go_to_bed_2 to true>>\n            -> Stay up anyway.\n    <<endif>>\n-> \"Little Gidding\"\n    Object: \"What we call the beginning is often the end / And to make an end is to make a beginning.\"\n    [[Books]]\n",
+		"position": {
+			"x": 1770,
+			"y": 257
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Mom2HasWatch",
+		"tags": "",
+		"body": "<<if visited(\"Mom2TellTruth\") is false>>\n    Mom: Hello Riley.\n    Riley: Have you seen my watch?\n    Mom: Of course I do. You just showed it to me yesterday.\n    Riley: No, I mean, after that.\n    Mom: No.\n        -> I left it on my desk last night and now it's gone.\n            Mom: I cleaned your desk yesterday, but I didn't see anything.\n            Mom: Wait...\n            Riley: Oh no. Please don't tell me you threw it away.\n            Mom: I did throw away a lot of trash on your desk...\n            Riley: MOM!\n        -> I think someone stole it.\n            Mom: Don't be silly, Riley. No one can get into our living unit.\n            Riley: But it was on my desk and now it's gone!\n            Mom: Well, I cleaned your desk yesterday and I didn't see anything.\n            Mom: Wait...\n            Riley: Oh no. Please don't tell me you threw it away.\n            Mom: I did throw away a lot of trash on your desk...\n            Riley: MOM!\n    \n    Mom: Sorry, Riley. I'll get you a new watch.\n    Riley: It's not just any watch!\n    Mom: What do you mean by that? \n    Riley: Uh... I mean...\n    [[Mom2Question]]\n<<else>>\n    Mom: I will talk to Dad about it, ok?\n<<endif>>\n",
+		"position": {
+			"x": 272,
+			"y": 686
+		},
+		"colorID": 1
+	},
+	{
+		"title": "Windows3",
+		"tags": "",
+		"body": "<<if $day_4 is false>>\n    <<if $can_discover_problem is false>>\n        Riley: The purple star is really cool...\n    <<else>>\n        Riley: The purple star is really cool...\n        Riley: Actually... why is it moving so much faster than before? Is it about to explode??\n        Riley: MOOOOMMMMM!!!!\n    <<set $found_problem to true>>\n    <<endif>>\n<<else>>\n    [[Windows4]]\n<<endif>>\n",
+		"position": {
+			"x": 2222,
+			"y": 1864
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Computer3",
+		"tags": "",
+		"body": "<<if $day_4 is false>>\n    Computer: Good morning, Riley! What do you want to do today? :)\n        -> Play Mario Kart.\n            <<if $random1 is false>>\n                Object: Riley placed 1st in Rainbow Road! Yes!!!\n                <<set $random1 to true>>\n            <<else>>\n                Object: Riley placed 3rd in Peach Beach.\n                <<set $random1 to false>>\n            <<endif>>\n        -> Play Maplestory.\n            Object: The file is corrupted...\n        -> Look up \"Four Quartets.\"\n            Object: A collection of four poems by T.S. Eliot, meditating upon man's relationship with time, the universe, and the divine.\n        -> Look up \"Bright purple star.\"\n            Object: XK-28J39, a.k.a \"Purple Asphodel\": The rarest celestial object ever discovered, with only two sightings ever recorded. Its composition is unknown.\n<<else>>\n    [[Computer4]]\n<<endif>>\n",
+		"position": {
+			"x": 1409,
+			"y": 1305
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Athena3",
+		"tags": "",
+		"body": "<<if $day_4 is false>>\n    <<if $help_athena is false>>\n        [[AthenaFrustrated]]\n    <<else>>\n        <<set $talking_to_mom to false>>\n        [[HelpAthena]]\n    <<endif>>\n<<else>>\n    [[Athena4]]\n<<endif>>\n",
+		"position": {
+			"x": 722,
+			"y": 1290
+		},
+		"colorID": 3
+	},
+	{
+		"title": "HelpAthena",
+		"tags": "",
+		"body": "<<if $found_problem is false>>\n    <<set $athena_face_front to true>>\n    <<set $mom_face_back to true>>\n    <<if visited(\"HelpAthena\") is false>>\n        Athena: Lysa... why are you here?\n        Mom: Riley told me you had trouble with the engine. Could I help?\n        Athena: Uh, if you must. You haven't touched any engine parts for more than a decades though. You sure you still remember how everything works?\n        Mom: I might be slower these days, but I think my memory is still intact. Let's get to work.\n        <<if $talking_to_mom is true>>\n            <<set $mom_face_right to true>>\n        <<endif>>\n        Mom: Riley, could you check out the cockpit and see if you could find any problem source there?\n        Riley: Ok.\n        Mom: Thank you.\n        <<set $mom_face_back to true>>\n        Mom: Now, Athena, what was the first engine part that stopped working?\n        <<set $can_discover_problem to true>>\n    <<else>>\n        Athena: ...What if the micro-fluctuations came from asymmetric gluon separation?\n        Mom: That would have caused gamma radiation, so no.\n        <<if $talking_to_mom is true>>\n            <<set $mom_face_right to true>>\n        <<endif>>\n        Mom: Riley, have you found any problems in the cockpit?\n        Mom: No? Well, keep looking, I guess.\n    <<endif>>\n<<else>>\n    [[FoundProblem]]\n<<endif>>\n",
+		"position": {
+			"x": 584,
+			"y": 1548
+		},
+		"colorID": 3
+	},
+	{
+		"title": "Johnson4",
+		"tags": "",
+		"body": "<<if $day_5 is false>>\r\n    <<if $start_ch2_minigame is false>>\r\n        Athena: Riley...how are you...running...so quickly?\r\n        Riley: It's a long story, but my watch is protecting me from the time dilation.\r\n        Athena: ...how...?\r\n        Riley: I don't know. What's happening here?\r\n        Athena: ARKANGEL...is falling...too...quickly...\r\n        Athena: ...we can't...steer it...away...from danger...\r\n        Riley: What?! What should we do now?\r\n        Athena: You have...to help...Riley, only you...are...fast...enough...\r\n        Riley: But I - I wasn't even allowed to touch the control panel before!\r\n        Athena: We'll help you...Pull us...to the...computers...we...are...too slow...\r\n    <<else>>\r\n        [[JohnsonInGame]]\r\n    <<endif>>\r\n<<else>>\r\n    [[Johnson5]]\r\n<<endif>>\n",
+		"position": {
+			"x": 1210,
+			"y": 2354
+		},
+		"colorID": 6
+	},
+	{
+		"title": "Athena4",
+		"tags": "",
+		"body": "<<if $day_5 is false>>\r\n    <<if $start_ch2_minigame is false>>\r\n        Riley: Why is everyone here? What's happening?\r\n        Athena: Riley...how are you...running...so quickly?\r\n        Riley: It's a long story, but my watch is protecting me from the time dilation.\r\n        Athena: ...how...?\r\n        Riley: I don't know. What's happening here?\r\n        Athena: ARKANGEL...is falling...too...quickly...\r\n        Athena: ...we can't...steer it...away...from danger...\r\n        Riley: What?! What should we do now?\r\n        Athena: You have...to help...Riley, only you...are...fast...enough...\r\n        Riley: But I - I wasn't even allowed to touch the control panel before!\r\n        Athena: We'll help you...Pull us...to the...computers...we...are...too slow...\r\n        <<set $start_ch2_minigame to true>>\r\n    <<else>>\r\n        [[AthenaInGame]]\r\n    <<endif>>\r\n<<else>>\r\n    [[Athena5]]\r\n<<endif>>\n",
+		"position": {
+			"x": 876,
+			"y": 2360
+		},
+		"colorID": 3
+	},
+	{
+		"title": "Mom4",
+		"tags": "",
+		"body": "<<if $day_5 is false>>\r\n    <<if $start_ch2_minigame is false>>\r\n        Riley: Why is everyone here? What's happening?\r\n        Mom: Riley...how are you...running...so quickly?\r\n        Riley: It's a long story, but my watch is protecting me from the time dilation.\r\n        Mom: ...how...?\r\n        Riley: I don't know. What's happening here?\r\n        Mom: ARKANGEL...is falling...too...quickly...\r\n        Mom: ...we can't...steer it...away...from danger...\r\n        Riley: What?! What should we do now?\r\n        Mom: You have...to help...Riley, only you...are...fast...enough...\r\n        Riley: But I - I wasn't even allowed to touch the control panel before!\r\n        Mom: We'll help you...Pull us...to the...computers...we...are...too slow...\r\n        <<set $start_ch2_minigame to true>>\r\n    <<else>>\r\n        [[MomInGame]]\r\n    <<endif>>\r\n<<else>>\r\n    [[Mom5]]\r\n<<endif>>\r\n",
+		"position": {
+			"x": 33,
+			"y": 2329
+		},
+		"colorID": 1
+	},
+	{
+		"title": "Dad4",
+		"tags": "",
+		"body": "<<if $day_5 is false>>\r\n    <<if $start_ch2_minigame is false>>\r\n        Riley: Why is everyone here? What's happening?\r\n        Dad: Riley...how are you...running...so quickly?\r\n        Riley: It's a long story, but my watch is protecting me from the time dilation.\r\n        Dad: ...how...?\r\n        Riley: I don't know. What's happening here?\r\n        Dad: ARKANGEL...is falling...too...quickly...\r\n        Dad: ...we can't...steer it...away...from danger...\r\n        Riley: What?! What should we do now?\r\n        Dad: You have...to help...Riley, only you...are...fast...enough...\r\n        Riley: But I - I wasn't even allowed to touch the control panel before!\r\n        Dad: We'll help you...Pull us...to the...computers...we...are...too slow...\r\n        <<set $start_ch2_minigame to true>>\r\n    <<else>>\r\n        [[DadInGame]]\r\n    <<endif>>\r\n<<else>>\r\n    [[Dad5]]\r\n<<endif>>\r\n",
+		"position": {
+			"x": -435,
+			"y": 2342
+		},
+		"colorID": 2
+	},
+	{
+		"title": "Computer4",
+		"tags": "",
+		"body": "<<if $day_5 is false>>\n    Computer: Good morning, Riley! What do you want to do today? :)\n        -> Play Mario Kart.\n            <<if $random1 is false>>\n                Object: Riley placed 12th in Bowser's Castle.\n                <<set $random1 to true>>\n            <<else>>\n                Object: Riley placed 12th in Sunshine Airport.\n                <<set $random1 to false>>\n            <<endif>>\n        -> Play Maplestory.\n            Object: The file is corrupted..\n        -> Look up \"Four Quartets.\"\n            Object: A collection of four poems by T.S. Eliot, meditating upon man's relationship with time, the universe, and the divine.\n        -> Look up \"Bright purple star.\"\n            Object: XK-28J39, a.k.a \"Purple Asphodel\": The rarest celestial object ever discovered, with only two sightings ever recorded. Its composition is unknown.\n<<else>>\n    [[Computer4]]\n<<endif>>\n",
+		"position": {
+			"x": 1550,
+			"y": 2367
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Bed4",
+		"tags": "",
+		"body": "<<if $day_5 is false>>\n    <<if $can_sleep_4 is true>>\n        Bed: Go to sleep?\n            -> Yes.\n                <<set $day_5 to true>>\n                <<set $go_to_bed_5 to true>>\n            -> No.\n    <<else>>\n        Bed: It is too early to sleep.\n    <<endif>>\n<<else>>\n    [[Bed5]]\n<<endif>>\n",
+		"position": {
+			"x": 1761,
+			"y": 2397
+		},
+		"colorID": 4
+	},
+	{
+		"title": "SpaceScene",
+		"tags": "",
+		"body": "Object: Space is beautiful, isn't it?\nRiley: Yeah... Wait, where am I? Who are you?\nObject: Hello, Riley.\nRiley: What are you doing? Let me go!\nObject: \"Time present and time past, are both perhaps present in time future, and time future contained in time past.\" Do you understand?\nRiley: The present is in the future, and the future is in the past... are you...\nObject: Yes. I'm Riley. Nice to meet you, Riley.\nRiley: Are you kidding me?!\nObject: No. I have been trying to help you. \nRiley: By leaving unhelpful notes around and freaking everyone out? That's really helpful.\nObject: Perhaps my people skills are getting rusty. After all, I haven't interacted spoken to anyone in...well, a very long time.\nRiley: ...\nRiley: Why?\nObject: ...\nRiley: What are you doing here anyway? And where am I? \nObject: You are in an interstitial dimension. Like platform 9 and 3/4.\nObject: Time travel is not possible, so I can only communicate with you through a half dimension, wedged between realities.\nRiley: Why did you lead me here?\nObject: For this. The watch. You must not lose it again, Riley.\nRiley: It wasn't my fault! It's Mom! Why do I even need this watch?\nObject: It will protect you from what will happen next. \nRiley: So, with this watch I can save everyone?\nObject: ...\nObject: Only you can wear this watch. It will protect only you.\nRiley: I'll save everyone.\nObject: I know you will try.\nRiley: You are a dick.\nObject: Good luck, Riley.\n<<set $day_4 to true>>\n<<set $end_space_scene to true>>\n<<set $has_watch to true>>\n<<set $has_watch_but_lost to false>>\n",
+		"position": {
+			"x": 2722,
+			"y": 2169
+		},
+		"colorID": 0
+	},
+	{
+		"title": "FoundProblem",
+		"tags": "",
+		"body": "<<if $find_final_note is false>>\n    <<set $athena_face_front to true>>\n    <<set $mom_face_back to true>>\n    Riley: Help!!\n    <<if $talking_to_mom is true>>\n        <<set $mom_face_right to true>>\n    <<else>>\n        <<set $athena_face_right to true>>\n    <<endif>>\n    Mom: What is it?\n    Riley: The purple star!\n    Athena: What about it?\n    Riley: I think it's about to explode! It's spinning really quickly!\n    Mom: 1e-2 rad/s? 2.5e-2 rad/s? Give me an order of magnitude estimate.\n    Riley: Uh...\n    <<set $athena_face_front to true>>\n    Athena: It doesn't matter. It's not related to our engine issues on hand.\n    Mom: Actually... it could matter. Riley. Order of estimate.\n    <<if $talking_to_mom is true>>\n        <<set $mom_face_right to true>>\n    <<else>>\n        <<set $athena_face_right to true>>\n    <<endif>>\n    [[Estimate]]\n<<else>>\n    <<if $talking_to_mom is false>>\n        <<set $athena_face_right to true>>\n    <<endif>>\n    Athena: Riley! Go look in the storage room for the turbo capacitor!\n<<endif>>\n",
+		"position": {
+			"x": 580,
+			"y": 1794
+		},
+		"colorID": 3
+	},
+	{
+		"title": "Windows4",
+		"tags": "",
+		"body": "<<if $day_5 is false>>\n    <<if $day_4 is false>>\n        Riley: The purple star is so cool...\n    <<else>>\n        Riley: This purple star might be the end of us all.\n    <<endif>>\n<<else>>\n    [[Windows5]]\n<<endif>>\n",
+		"position": {
+			"x": 2283,
+			"y": 2739
+		},
+		"colorID": 0
+	},
+	{
+		"title": "FoundProblemLoop",
+		"tags": "",
+		"body": "-> But it was spinning really quickly! I saw it!\n    <<if $talking_to_mom is false>>\n        <<set $athena_face_right to true>>\n    <<endif>>\n    Athena: You probably messed up the units.\n    [[FoundProblem2]]\n-> But what if our mass detector is failing?\n    <<if $talking_to_mom is false>>\n        <<set $athena_face_right to true>>\n    <<endif>>\n    Athena: It is not. We double check it everyday.\n    [[FoundProblem2]]\n-> But what if it's dark matter?\n    <<if $talking_to_mom is false>>\n        <<set $athena_face_right to true>>\n    <<endif>>\n    Athena: Our mass detector detects dark matter as well.\n    [[FoundProblem2]]\n",
+		"position": {
+			"x": 580,
+			"y": 2059
+		},
+		"colorID": 3
+	},
+	{
+		"title": "Cardboard Boxes",
+		"tags": "",
+		"body": "Object: Nothing of interest here.\n",
+		"position": {
+			"x": 2654,
+			"y": 1413
+		},
+		"colorID": 0
+	},
+	{
+		"title": "WakeUp",
+		"tags": "",
+		"body": "<<if $day_2 is false>>\n    Riley: Ready to face the day!\n    <<set $has_watch to true>>\n        -> Sleep for a little longer.\n            Object: Riley's ready to face the day. $They can't sleep any more.\n        -> Check the time.\n            <<if $has_watch is true>>\n                Object: It is now 9 am. Riley had slept for 8 hours.\n            <<else>>\n                Object: Riley does not have the watch anymore.\n            <<endif>>\n        -> Brush teeth.\n            Object: Riley likes $their chocolate-flavored space toothpaste.\n        -> Shower.\n            Object: Riley can't shower since water does not flow downwards in space.\n            Object: Kidding! Of course ARKANGEL has artificial gravity. Riley just doesn't want to shower.\n<<else>>\n    [[WakeUp2]]\n<<endif>>\n",
+		"position": {
+			"x": 2048,
+			"y": -419
+		},
+		"colorID": 0
+	},
+	{
+		"title": "WakeUp2",
+		"tags": "",
+		"body": "<<if $day_3 is false>>\n    <<set $go_to_bed to false>>\n        Riley: *yawwnnn*\n        Riley: Let me check the time...\n        <<if $has_watch is true>>\n            Riley: It is now...\n            Riley: What? Where's my watch?! It was on my desk last night!\n            <<set $has_watch_but_lost to true>>\n        <<else>>\n            Riley: Right, I don't have my watch anymore.\n        <<endif>>\n        Riley: I should probably talk to someone about the note.\n<<else>>\n    [[WakeUp3]]\n<<endif>>\n",
+		"position": {
+			"x": 2097,
+			"y": 265
+		},
+		"colorID": 0
+	},
+	{
+		"title": "WakeUp3",
+		"tags": "",
+		"body": "<<if $day_4 is false>>\n    <<set $go_to_bed to false>>\n        -> Sleep for a little longer.\n            Object: Riley's ready to face the day. $They can't sleep any more.\n        -> Check the time.\n            Object: Riley does not have the watch anymore.\n        -> Brush teeth.\n            Object: Riley likes $their chocolate-flavored space toothpaste.\n        -> Shower.\n            Object: Riley can't shower since water does not flow downwards in space.\n            Object: Kidding! Of course ARKANGEL has artificial gravity. Riley just doesn't want to shower.\n<<else>>\n    [[WakeUp4]]\n<<endif>>\n",
+		"position": {
+			"x": 2100,
+			"y": 1139
+		},
+		"colorID": 0
+	},
+	{
+		"title": "WakeUp4",
+		"tags": "",
+		"body": "<<if $day_5 is false>>\n    <<set $go_to_bed to false>>\n    Riley: *yawwwnn*\n    Riley: Was that just a dream?\n        -> Sleep for a little longer\n            Object: After that dream, Riley can't go back to sleep.\n        -> Check the time.\n            Object: It's about 5AM.\n            Riley: Huh... I guess the watch has been on my table this whole time.\n        -> Brush teeth.\n            Object: Riley likes $their chocolate-flavored space toothpaste.\n        -> Shower.\n            Object: Riley can't shower since water does not flow downwards in space.\n            Object: Kidding! Of course ARKANGEL has artificial gravity. Riley just doesn't want to shower.\n        Riley: WAIT! I DIDN'T GET THE CAPACITORS!\n        Object: It's too late now! Riley needs to hurry to the Cockpit!\n<<else>>\n    [[WakeUp5]]\n<<endif>>\n",
+		"position": {
+			"x": 1974,
+			"y": 2158
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Dad2NoWatch",
+		"tags": "",
+		"body": "<<if $mom_has_moved_to_talk_to_dad is false>>\n    Riley: Morning, Dad.\n    Dad: ... ah, Riley, you scared me. Did you study last night?\n    Riley: Yes.\n    Dad: Good!\n<<else>>\n    [[MomDadTalkAboutNote]]\n<<endif>>\n",
+		"position": {
+			"x": -269,
+			"y": 730
+		},
+		"colorID": 2
+	},
+	{
+		"title": "Dad2HasWatch",
+		"tags": "",
+		"body": "<<if visited(\"Mom2HasWatch\") is false>>\n    Dad: Good morning Riley!\n    Riley: Have you seen my watch?\n    Dad: No... did you lose it?\n        -> Yeah...\n            Dad: Well, luckily it's not particularly important, is it?\n        -> Yeah... but I thought I left it on my desk.\n            Dad: Hmm... I didn't see it when I was in your room earlier. Are you sure you left it there?\n        -> I think someone stole it!\n            Dad: Riley, you can't jump to conclusions like that. There is no one on this ship that would steal your watch.\n<<else>>\n    Dad: Did you find the watch, Riley?\n    Riley: Mom accidentally threw it away...\n    Dad: Awh. I'm sorry, Riley. I'm sure she didn't mean to hurt you.\n<<endif>>\n",
+		"position": {
+			"x": -614,
+			"y": 734
+		},
+		"colorID": 2
+	},
+	{
+		"title": "Dad1",
+		"tags": "",
+		"body": "<<if $can_sleep_1 is false>>\n    <<if $done is false>>    \n        <<if $bring_breakfast_to_mom is false>>\n            Riley: Hey dad.\n            Dad: GOOOOOOOOOD MORNING, kiddo! Want some pancakes?\n                -> Yeah! I'm super hungry.\n                    Object: The pancake tastes disgusting. Riley tries not to throw up.\n                -> No thanks.\n            Dad: So I heard you fixed the gadget.\n            Riley: Yeah, it's a watch.\n            Dad: I'm really proud of you, Riley.\n            Riley: Really?\n            Dad: Of course. You did it all on your own, honey.\n            Dad: By the way, have you seen Mom? She went out without finishing her breakfast again...\n                -> No.\n                    Dad: Why don't you go and bring breakfast to her? She should be at work. I'm sure you can find the way.\n                -> Does it matter? She never eats breakfast anyway.\n                    Dad: Riley! That's it. You need to be more appreciative of your mother. \n                    Dad: Go and bring breakfast to her right now. She should be at work. I'm sure you can find the way.\n                -> Oh no... I can bring some breakfast to her when I go out.\n                    Dad: Thank you, Riley! She should be at work. I'm sure you can find the way.\n            <<set $bring_breakfast_to_mom to true>>\n        <<else>>\n            Dad: Did you forget which way to go? Go down the hallway, through the tele-pad, and Mom should be in the Cockpit.\n        <<endif>>\n    <<else>>\n        <<if $mysterious_book is false>>\n            Dad: Hey, you're back! Want some curry?\n                -> Yeah! I love curry.\n                    Object: The curry tastes horrible. Riley should really learn to refuse food from Dad.\n                -> No thanks.\n                    Dad: Your loss. There's PB&J in the cabinet.\n            Dad: By the way, have you finished your reading I assigned to you last week?        \n            Riley: No...\n            Dad: Well, have fun studying then! Hehe.\n            Object: Drat.\n            <<set $mysterious_book to true>>\n        <<else>>\n            Dad: Make sure you do your readings!\n        <<endif>>\n    <<endif>>\n<<else>>\n    [[Dad1CanSleep]]\n<<endif>>\n",
+		"position": {
+			"x": -194,
+			"y": -233
+		},
+		"colorID": 2
+	},
+	{
+		"title": "Dad1CanSleep",
+		"tags": "",
+		"body": "Dad: It's getting late, Riley. Time to go to bed!\n",
+		"position": {
+			"x": -186,
+			"y": 23
+		},
+		"colorID": 2
+	},
+	{
+		"title": "Mom1",
+		"tags": "",
+		"body": "<<if $can_sleep_1 is false>>\n    <<if $done is false>>\n        Mom: ...\n        Riley: Hi mom.\n        Mom: ...\n        Riley: Mommmm~~~~\n        Mom: ... Oh hey Riley! Sorry I didn't notice you - I suppose I must have been deep in thought.\n        <<if $bring_breakfast_to_mom is true>>\n            Riley: I brought you breakfast.\n            Mom: Oh. Thank you, Riley.\n            <<set $bring_breakfast_to_mom to false>>\n        <<endif>>\n            -> What were you thinking about?\n                Mum: Well... everything and nothing, I suppose.\n                Riley: What do you mean?\n                Mom: ...\"O brilliant kids, frisk with your dog, fondle your shells and sticks, bleached by Time and the elements...\"\n                Riey: Mom??\n                Mom: ...\"but there is a line you must not cross nor ever trust beyond it - spry cordage of your bodies to caresses too lichen-faithful from too wide a breast.\"\n                Riley: Sigh... I should just press 'esc'...\n                Mom: ...\"The bottom of the sea is cruel.\" Do you understand?\n                -> No.\n                -> No.\n                -> No.\n                -> No.\n                Mum: You are too young, young man.\n                Object: Maybe Mom will be more impressed if Riley shows off $their watch.\n            -> I fixed the gadget, mom.\n                Mom: Well done, Riley.\n                -> Do you want to take a look?\n                    Mom: Later. Now I must get back to work.\n                    Riley: Pleeeeeease?\n                    Mom: If I must. What is it?\n                    Riley: It's a watch.\n                -> It's a watch.\n                Mom: A watch? Curious... Let me take a look.\n                Mom: Finest quality indeed... impeccable hyperfine structure, clocking at a frequency of, let's see... 9,192,631,770 Hz...\n                Mom: Riley, I don't know how you got this, but this watch is astoundingly precise, and almost impossible for a watch that looks at least 500 years old.\n                Mom: I would need to take it for further inspection. \n                <<set $done to true>>\n                -> Give watch to mom.\n                    Mom: Thank you, I'll look into it now. You should probably go home - Dad's finished cooking dinner.\n                    <<set $has_watch to false>>\n                -> Refuse.\n                    Mom: Riley... I am your mother.\n                    -> Give watch to mom.\n                        Mom: Thank you. I'll look into it now. You should go home - Dad's finished cooking dinner.\n                        <<set $has_watch to false>>\n                    -> Continue to refuse.\n                        Mom: Fine. But it's your responsibility if anything happens to it.\n                        Mom: Now go home. Dad's finished cooking dinner.\n                        <<set $has_watch to true>>\n    <<else>>\n        Mom: .........\n        Riley: Hi mom.\n        Mom: .........\n        Riley: Mommmm~~~~\n        Mom: ... Oh hey Riley! Sorry I didn't notice you - I suppose I must have been deep in thought.\n            -> What were you thinking about?\n                Mum: Well... everything and nothing, I suppose.\n                Riley: What do you mean?\n                Mom: ...\"O brilliant kids, frisk with your dog, fondle your shells and sticks, bleached by Time and the elements...\"\n                Riey: Mom??\n                Mom: ...\"but there is a line you must not cross nor ever trust beyond it - spry cordage of your bodies to caresses too lichen-faithful from too wide a breast.\"\n                Riley: Sigh... I should just press 'esc'...\n                Mom: ...\"The bottom of the sea is cruel.\" Do you understand?\n                -> No.\n                -> No.\n                -> No.\n                -> No.\n                Mum: You are too young, young man.\n    <<endif>>\n<<else>>\n    [[Mom1CanSleep]]\n<<endif>>\n",
+		"position": {
+			"x": 361,
+			"y": -226
+		},
+		"colorID": 1
+	},
+	{
+		"title": "Mom1CanSleep",
+		"tags": "",
+		"body": "Riley: Mom, can I...\nMom: Riley, it's 1 am already. Shouldn't you be in bed?\nRiley: But...\nMom: No \"but\". It's late, and you need more sleep. Go to bed.\n",
+		"position": {
+			"x": 356,
+			"y": 45
+		},
+		"colorID": 1
+	},
+	{
+		"title": "Estimate",
+		"tags": "",
+		"body": "-> 0.01 rad/s?\n    Mom: That's normal.\n    [[Estimate]]\n-> 0.1 rad/s?\n    Mom: That's a little bit fast, but not abnormal.\n    [[Estimate]]\n-> 1 rad/s?\n    Mom: That's... are you sure?\n    Riley: I think so??\n    Mom: That's extremely worrying. That celestial object has to have at least the mass of 100 million black holes in order to rotate that quickly.\n    Riley: What??  \n    <<set $athena_face_front to true>>\n    Athena: With all due respect, Lysa, I think you are wrong. Our mass detectors indicate the biggest object around us is just a small star.\n    [[FoundProblemLoop]]\n-> 10 rad/s?\n    Mom: That's literally impossible.\n    [[Estimate]]\n",
+		"position": {
+			"x": 312,
+			"y": 1953
+		},
+		"colorID": 3
+	},
+	{
+		"title": "FoundProblem2",
+		"tags": "",
+		"body": "Mom: I disagree.\n<<set $mom_face_back to true>>\n<<set $athena_face_front to true>>\nMom: Athena, if I recall correctly, the working range of our detector is 10723 light years?\nAthena: Yes.\nMom: I've never encountered this before, but.... perhaps we are falling towards the event horizon of a super black hole at least 500 million light years away...\nAthena: 500 million light years?!\nMom: Oooh! So that's why we have been feeling much slower than normal. The closer we get to the black hole, the more the time dilates, and the slower we move...\nRiley: But what happens when we reach the black hole?\n<<if $talking_to_mom is false>>\n    <<set $athena_face_right to true>>\n<<endif>>\nAthena: We will be frozen in time. Like marble statues.\nMom: Oh my...... this is absolutely sublime. Sublime....\n<<set $athena_face_front to true>>\nAthena: Lysa, how is this sublime? We are falling towards a super blackhole!\nMom: ......And so it was I entered the broken world... To trace the visionary company of love, its voice... \nRiley: Oh no...\nMom: ......An instant in the wind (I know not whither hurled)... But not for long to hold each desperate choice...\n<<if $talking_to_mom is false>>\n    <<set $athena_face_right to true>>\n<<endif>>\nAthena: Oh my god. Riley, we need to get to work as quick as possible. At this rate, I estimate that we only have a day left before we can no longer move.\nRiley: A day?! What can we do in a day?\nAthena: Probably not much. But we have to try. I refuse to just give up and go down witout a fight. Riley, go to the storage room and bring me some turbo capacitors.\nRiley: Me??\nAthena: Yes, you! Just go! NOW!\n<<set $find_final_note to true>>\n",
+		"position": {
+			"x": 597,
+			"y": 2283
+		},
+		"colorID": 3
+	},
+	{
+		"title": "Desk",
+		"tags": "",
+		"body": "<<if $day_2 is false>>\n    <<if $found_note_here is false>>\n        [[Desk1]]\n    <<else>>\n        [[Desk2]]\n    <<endif>>\n<<else>>\n    <<if $day_3 is false>>    \n        [[Desk2]]\n    <<else>>\n        [[Desk3]]\n    <<endif>>\n<<endif>>\n",
+		"position": {
+			"x": 1607,
+			"y": -330
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Desk2",
+		"tags": "",
+		"body": "<<if $has_watch_but_lost is true>>\n    Object: Riley left his watch here before he went to bed, but it's not here anymore.\n<<endif>>\nObject: What does Riley want to do?\n    -> Look at the mysterious note again.\n        Object: Little Riley:                                                 Keep the watch close to yourself. Sweet dreams.                        - a well-wisher  (P.S. Keep this our little secret.)\n    -> Read some books.\n        -> \"Principles of Mathematical Analysis\" by Walter Rudin\n            Object: 2.32  Definition   A subset K of a metric space X is said to be compact if every open cover of K contains a finite subcover.\n            Object: Riley used to have these as bedtime stories. They are really good at putting Riley to sleep.\n        -> \"Four Quartets\" by T.S. Eliot\n            [[Books2]]\n        -> \"A Brief History of Time\" by Stephen Hawking\n            Object: Time is relative, time is sometimes quicker sometimes slower... yeah Riley totally gets it.\n        -> \"Call Me By Your Name\" by André Aciman\n            Object: Johnson's favourite book, but Riley never even finished the first page...\n",
+		"position": {
+			"x": 1695,
+			"y": 504
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Books2",
+		"tags": "",
+		"body": "-> \"Burnt Norton\"\n    Riley: \"Time present and time past / Are both perhaps present in time future / And time future contained in time past.\"\n        -> Read another poem.\n            [[Books2]]\n        -> Stop reading.\n-> \"East Coker\"\n    Riley: \"In my beginning is my end.\"\n        -> Read another poem.\n            [[Books2]]\n        -> Stop reading.\n-> \"The Dry Salvages\"\n    Riley: \"I do not know much about gods; but I think that the river / Is a strong brown god—sullen, untamed and intractable.\"\n        -> Read another poem.\n            [[Books2]]\n        -> Stop reading.\n-> \"Little Gidding\"\n    Object: \"What we call the beginning is often the end / And to make an end is to make a beginning.\"\n        -> Read another poem.\n            [[Books2]]\n        -> Stop reading.\n",
+		"position": {
+			"x": 1716,
+			"y": 752
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Desk3",
+		"tags": "",
+		"body": "Object: What does Riley want to do?\n    -> Look at the mysterious note again.\n        Object: Little Riley:                                                 Keep the watch close to yourself. Sweet dreams.                        - a well-wisher  (P.S. Keep this our little secret.)\n    -> Read some books.\n        -> \"Principles of Mathematical Analysis\" by Walter Rudin.\n            Object: 2.32  Definition   A subset K of a metric space X is said to be compact if every open cover of K contains a finite subcover.\n            Object: Riley used to have these as bedtime stories. They are really good at putting Riley to sleep.\n        -> \"Four Quartets\" by T.S. Eliot.\n            [[Books2]]\n        -> \"A Brief History of Time\" by Stephen Hawking.\n            Object: Time is relative, time is sometimes quicker, sometimes slower.\n            Object: Yeah Riley totally gets it.\n        -> \"Call Me By Your Name\" by André Aciman.\n            Object: Johnson's favourite book, but Riley never even finished the first page.\n",
+		"position": {
+			"x": 1615,
+			"y": 1323
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Dad3.1",
+		"tags": "",
+		"body": "<<if $has_watch is true>>\n    Riley: Hey, Dad.\n    Dad: ...Oh hey, Riley. What are you doing here?\n        -> I don't know.\n            Dad: Same.\n        -> Have you been feeling off lately?\n            Dad: No...? I mean, I'm sleepy, but that doesn't really count as \"feeling off.\"\n<<else>>\n    Riley: Hey Dad.\n    Dad: ...oh hey, Riley, I was just about to look for you. Have you received any more mysterious notes?\n    Riley: No...\n    Dad: That's good.\n<<endif>>\n",
+		"position": {
+			"x": -165,
+			"y": 1543
+		},
+		"colorID": 2
+	},
+	{
+		"title": "Dad3.2",
+		"tags": "",
+		"body": "Riley: Dad! Do you know where the turbo capacitors are?\nDad: Must be around here. What do you need them for?\nRiley: I can't explain, I have to hurry!\n",
+		"position": {
+			"x": -686,
+			"y": 1550
+		},
+		"colorID": 2
+	},
+	{
+		"title": "MomDadTalkAboutNote",
+		"tags": "",
+		"body": "<<if $can_sleep_2 is false>>\n    <<set $dad_face_right to true>>\n    <<set $mom_face_left to true>>\n    Dad: ...could it be....... but they are locked....\n    Mom: .....Riley said.......so I don't think so.....\n    Riley: Mom? Dad?\n    <<set $dad_face_back to true>>\n    <<set $mom_face_back to true>>\n    Dad: Hey Riley! How's your day?\n        -> What were you talking about?\n            Dad: Oh, it's nothing important.\n            Riley: Then why were you whispering?\n            Dad: Well...\n            [[MomExplains]]\n        -> I know you two are talking about what happened.\n            Dad: Well, yes... about that, don't worry about it, ok? We'll handle it.\n            Riley: I want to know! It was my watch!\n            Dad: Well...\n            [[MomExplains]]\n        -> Pretty good!\n            Dad: That's good!\n            Object: Riley walks away with a funny feeling.\n<<else>>\n    Mom: I'm sorry, Riley.\n<<endif>>\n",
+		"position": {
+			"x": -88,
+			"y": 1001
+		},
+		"colorID": 2
+	},
+	{
+		"title": "MomExplains",
+		"tags": "",
+		"body": "Mom: Basically, we think -\n<<set $dad_face_right to true>>\nDad: Lysa, I don't think we should tell Riley -\nMom: We think whoever sent you that note is hiding somewhere on ARKANGEL. But we don't know how they got here, nor where they are. \nMom: The System didn't detect any location pings from anyone else who was registered on the ARKANGEL.\n<<set $dad_face_back to true>>\nMom: All we can do for now is to conduct a thorough search on our ship. Meanwhile, we asked Johnson to stay home with you in case something happens.\n<<if $has_watch_but_lost is true>>\n    <<set $dad_face_back to true>>\n        Dad: Honey, just go home and sleep. Mom and I will figure out who this could be. \n            -> Go to bed.\n                <<set $day_3 to true>>\n                <<set $go_to_bed_3 to true>>\n            -> Stay up anyway.\n<<else>>\n    Riley: What about the watch? Can I get it back?\n    Mom: No. The sender could have planted something in it to harm you.\n    [[MomExplains2]]\n<<endif>>",
+		"position": {
+			"x": -448,
+			"y": 1012
+		},
+		"colorID": 2
+	},
+	{
+		"title": "MomExplains2",
+		"tags": "",
+		"body": "-> But what if they are trying to help?\n    Mom: If they had with good intentions, do you think they would be so secretive?\n    [[MomExplains2]]\n-> But what if the watch will save my life?\n    Mom: It's just a watch, Riley.\n    Riley: But we couldn't even explain how the note even got there! Anything could happen!\n    Mom: Yes, Riley, that is why it is imperative we find this person. Don't be so dramatic. It's not going to save your life.\n    Riley: How could you be so sure that the watch wouldn't save my life?\n    Dad: No, Riley.\n    Dad: You do not realize how dangerous this is. You are not getting back the watch.\n    <<set $dad_face_right to true>>\n    Dad: Lysa, give me the watch so I can run my own analysis.\n    <<set $mom_face_left to true>>\n    Mom: Alright, it's just in my pocket.\n    Mom: ....hmm...\n    Dad: What?\n    Mom: I can't find it. It...it should be right here...Did I...?\n    Dad: Tell me you didn't lose the watch.\n    Mom: ...I might have, when I was thinking...\n    <<set $mom_face_back to true>>\n        -> It's alright...\n            Mom: I'm sorry.\n        -> MOM!\n            Mom: I'm sorry.\n        -> Or maybe the sender simply stole it?\n            Mom: No, no, it must have been my fault. I'm sorry.\n        <<set $dad_face_back to true>>\n        Dad: Honey, just go home and sleep. Mom and I will figure this out.\n            -> Go to bed.\n                <<set $day_3 to true>>\n                <<set $go_to_bed_3 to true>>\n            -> Stay up anyway.\n",
+		"position": {
+			"x": -811,
+			"y": 1062
+		},
+		"colorID": 2
+	},
+	{
+		"title": "Dad5",
+		"tags": "",
+		"body": "Riley: Dad!\n<<set $has_talked_to_dad_final to true>>\n",
+		"position": {
+			"x": -483,
+			"y": 3250
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Mom5",
+		"tags": "",
+		"body": "Riley: Mom!\n<<set $has_talked_to_mom_final to true>>\n",
+		"position": {
+			"x": 42,
+			"y": 3227
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Athena5",
+		"tags": "",
+		"body": "Riley: Athena? \n<<set $has_talked_to_athena_final to true>>\n",
+		"position": {
+			"x": 651,
+			"y": 3274
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Johnson5",
+		"tags": "",
+		"body": "Riley: Johnson?\n<<set $has_talked_to_johnson_final to true>>\n",
+		"position": {
+			"x": 1193,
+			"y": 3298
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Old Man",
+		"tags": "",
+		"body": "Object: Don't feel guilty. There's nothing you could have done to save them.\nObject: You tried your best.\nObject: I'm sorry for your loss.\nObject: Riley...?\n<<set $player_face_front to true>>\n    -> Go away.\n        [[Ending1]]\n    -> I'm ignoring you.\n        [[Ending1]]\n    -> Why did you give the watch back to me?\n        [[Ending2]]\n",
+		"position": {
+			"x": 1804,
+			"y": 3098
+		},
+		"colorID": 0
+	},
+	{
+		"title": "WakeUp5",
+		"tags": "",
+		"body": "-> Sleep for a little longer.\n    Object: Riley wishes $they could.\n-> Check the time.\n    Object: Riley can't even look at $their watch.\n-> Brush teeth.\n    Object: Riley brushed up. It was okay.\n-> Shower\n    Object: Riley doesn't feel like showering.\n",
+		"position": {
+			"x": 1977,
+			"y": 2599
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Ending1",
+		"tags": "",
+		"body": "Object: Riley...\nRiley: Leave me alone!\nObject: ...\nObject: I know just as well as you how this must feel.\nObject: Losing Mom, Dad...all my friends... everyone. \nObject: But I kept going. Forced myself to wake up every morning, eat breakfast, then go to the basement to work on the spaceship that would allow me to leave the Arkangel.\nObject: It's tough - learning everything about spaceships and the physics behind it on my own, building different prototypes and failing every time -\nObject: I wanted to give up everyday.\nObject: But at the end, it was worth it. After 13 years, I left Arkangel behind on the new spaceship, and began the new journey through space.\nObject: Along my way, I discovered exotic planets, new types of stars, and sometimes I would come across other spaceship, where I would stay for a couple of weeks.\nObject: It never stopped hurting. When I first communicated with you, and saw all of them still alive and walking around - I did not expect it to hurt like it did.\nObject: But this is what happened. There was nothing that either of us could have done to have prevented this. \nObject: Living has been... more hurt than happiness, more pain than sweetness...\nObject: Yet, if I were given a choice to live this life again, I wouldn't change a thing.\nRiley: Why?\nObject: Because it was all worth it.\n    -> Really?\n        [[HappyEnding]]\n    -> I don't believe you.\n        [[SadEnding]]\n",
+		"position": {
+			"x": 1665,
+			"y": 3426
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Ending2",
+		"tags": "",
+		"body": "Object: To save you, of course.\nRiley: What about Mom and Dad? Athena? Johnson?\nObject: Riley... I could only save one of you, and the reality of my present dictates that you must live. There is no choice.\nRiley: There is always a choice.\nObject: Is there? I come from the future. Every choice you've made and every word you've used... I remember it all.\nRiley: I...\nObject: ...don't believe you.\nObject: Time present and time past are both perhaps present in time future, and time future contained in time past. \nObject: Riley, I had no choice. You are destined to live.\nRiley: ...\nRiley: What am I living for? There's only me left. Everyone's dead.\nObject: It's tough, and I know I cannot convince you now. But years later, you will have built your own spaceship, and you will be leaving ARKANGEL to embark on a new journey.\nObject: Eventually, you will find new meaning in life. It'll never stop hurting, but it will get better.\n    -> Really?\n        [[HappyEnding]]\n    -> Then I don't want to get better.\n        Object: What do you mean?\n        Riley: I don't want to get better. I don't want to be you.\n        Object: I am you, Riley.\n        Riley: No, you are not. We always have a choice. You chose your path. I'm choosing my own path.\n        Object: And how do you think you are going to accomplish that? I'm the living proof that you are wrong.\n        [[SadEnding]]\n",
+		"position": {
+			"x": 1969,
+			"y": 3432
+		},
+		"colorID": 0
+	},
+	{
+		"title": "SadEnding",
+		"tags": "",
+		"body": "Riley: I'm throwing this away.\nObject: What?\nRiley: I'm taking the watch off.\nObject: Riley, you don't know what you are doing!\nRiley: Once I took the watch off, I won't be protected, and I'll be frozen forever like everyone else, right?\nObject: Yes! So why are you doing this?\nRiley: What else is there to live for? Mom, Dad... I can't do this without them.\nObject: Riley!\n<<set $sad_credits to true>>\n",
+		"position": {
+			"x": 1978,
+			"y": 3802
+		},
+		"colorID": 0
+	},
+	{
+		"title": "HappyEnding",
+		"tags": "",
+		"body": "Object: Yes, really.\nRiley: What should I do now?\nObject: Rest for a day or two. Then you've got to start working towards building your own ARKANGEL.\nRiley: How do I even begin?\nObject: Start with basic physics. You have all the books your parents left you on cosmology. Then, after that, you'll need to start designing your ARKANGEL.\nRiley: ... will you be here to help?\nObject: ...\nObject: I cannot. I am already pushing the limits - one minute of interstitial dimension phone call costs two million gummies. One minute more and I'll be in debt!\nRiley: Gummies?\nObject: International space currency. Gummy bears are very resistant to space radiation.\nRiley: Oh, ok.\nObject: Riley...\nObject: Take care, alright?\nRiley: Ok.\nObject: Don't do anything I wouldn't do.\nRiley: I won't.\nObject: Ok. See you.\nRiley: See you.\n<<set $happy_credits to true>>\n",
+		"position": {
+			"x": 1662,
+			"y": 3801
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Unit 1",
+		"tags": "",
+		"body": "Object: Living Unit 1. Raguna and his wife lives here. Mom and Dad say they're part of the farming district. \r\nObject: Riley forgot the woman's name though... Mist? Rosetta? \n",
+		"position": {
+			"x": 3115,
+			"y": 1097
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Unit 2",
+		"tags": "",
+		"body": "Object: Living Unit 2. Mr. Griffiths lives here. He can be a little gruff, but he always buys Riley's home-made space crystals.\n",
+		"position": {
+			"x": 3375,
+			"y": 1094
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Unit 3",
+		"tags": "",
+		"body": "Object: Living Unit 3. Zoe lives here. Riley has been told stories of how old and powerful Zoe is, even stronger than dragons!\n",
+		"position": {
+			"x": 3641,
+			"y": 1094
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Unit 4",
+		"tags": "",
+		"body": "Object: Living Unit 4. Riley doesn't really know who lives here... the place must be haunted!!\n",
+		"position": {
+			"x": 3894,
+			"y": 1092
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Computer Left",
+		"tags": "",
+		"body": "<<if $npc_at_left is true>> \r\n    Object: Let's go!\r\n    <<set $start_left_minigame to true>>\r\n<<else>>\r\n    <<if $start_ch2_minigame is false>>\r\n        <<if $can_discover_problem is true and $found_problem is false>> \r\n            Object: Riley can't find any problems here.\r\n        <<else>>\r\n            Object: A whole wall of quantum computers. Riley used to behind them when playing Hide-and-Seek with Dad as a little kid. Good old days.\r\n        <<endif>>\r\n    <<else>>\r\n        Object: Riley needs to bring Mom to this computer.\r\n    <<endif>>\r\n<<endif>>\r\n",
+		"position": {
+			"x": 3618,
+			"y": 837
+		},
+		"colorID": 5
+	},
+	{
+		"title": "WeirdDoor",
+		"tags": "",
+		"body": "Riley: What just happened???\n",
+		"position": {
+			"x": 3436,
+			"y": 1541
+		},
+		"colorID": 0
+	},
+	{
+		"title": "DadInGame",
+		"tags": "",
+		"body": "<<if $day_5 is false>>\r\n    <<if $npc_at_right is false>>\r\n        Dad: To...the...computer...on the right!\r\n    <<else>>\r\n        Dad: Riley...\r\n        Dad: I believe in you.\r\n    <<endif>>\r\n<<else>>\r\n    [[Dad5]]\r\n<<endif>>\r\n",
+		"position": {
+			"x": -533,
+			"y": 2705
+		},
+		"colorID": 2
+	},
+	{
+		"title": "MomInGame",
+		"tags": "",
+		"body": "<<if $day_5 is false>>\r\n    <<if $npc_at_left is false>>\r\n        Mom: My computer...is the left one...\r\n    <<else>>\r\n        Mom: Hurry, Riley... We need to...begin.\r\n    <<endif>>\r\n<<else>>\r\n    [[Mom5]]\r\n<<endif>>\r\n",
+		"position": {
+			"x": -74,
+			"y": 2727
+		},
+		"colorID": 1
+	},
+	{
+		"title": "AthenaInGame",
+		"tags": "",
+		"body": "<<if $day_5 is false>>\r\n    <<if $npc_at_center is false>>\r\n        Athena: Bring me...to the main computer...\r\n    <<else>>\r\n        Athena: The computer...will show you...what to do.\r\n    <<endif>>\r\n<<else>>\r\n    [[Athena5]]\r\n<<endif>>\n",
+		"position": {
+			"x": 650,
+			"y": 2727
+		},
+		"colorID": 3
+	},
+	{
+		"title": "JohnsonInGame",
+		"tags": "",
+		"body": "<<if $day_5 is false>>\r\n        Johnson: Kiddo, I...\r\n        Johnson: I know...you can do this.\r\n<<else>>\r\n    [[Johnson5]]\r\n<<endif>>\n",
+		"position": {
+			"x": 1097,
+			"y": 2736
+		},
+		"colorID": 6
+	},
+	{
+		"title": "FinalDialogue1",
+		"tags": "",
+		"body": "Riley: We did it! Mom, Dad!\n<<set $flickering to true>>\nRiley: Wait... what's happening?\nMom: RILEY! GET DOWN!\n",
+		"position": {
+			"x": 2478,
+			"y": 2981
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Mom2Question",
+		"tags": "",
+		"body": "Mom: Tell me the truth.\n    -> Lie.\n        Mom: Stop lying, Riley.\n            -> Tell the truth.\n                Riley: Uhh...\n                [[Mom2TellTruth]]\n    -> Tell her the truth.\n        Riley: Uhh...\n        [[Mom2TellTruth]]",
+		"position": {
+			"x": 270,
+			"y": 930
+		},
+		"colorID": 1
+	},
+	{
+		"title": "Johnson2Fun",
+		"tags": "",
+		"body": "Johnson: You really want to know?\n    -> Never mind.\n    -> Yes.\n        Johnson: You sure?\n            -> Never mind.\n            -> Yes.\n                Johnson: When my wife left this world, my daughter didn't understand. She was a little younger than you, Riley. \n                Johnson: I told her that mother was sleeping under the little hill in the farming district. \n                Johnson: But my daughter thought that if she ran off into the skies, she could find her again. That is why she left ARKANGEL.\n                Johnson: I miss my Rosalina.",
+		"position": {
+			"x": 930,
+			"y": 744
+		},
+		"colorID": 6
+	}
+]
