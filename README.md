@@ -15,7 +15,7 @@ ArkAngel is a two-chapter long, top-down RPG space-adventure game. You play as t
 
 ## How to Play
 
-Download and unzip `ARKANGEL.zip` — the archive contains everything you need to run the game on Windows.
+Download and unzip `ARKANGEL.zip` - the archive contains everything you need to run the game on Windows.
 
 ## Screenshots
 
